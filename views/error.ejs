@@ -1,0 +1,12 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="alert flash-error" role="alert">
+            </svg>
+            <h3 class="alert-heading">Page Not Found</h2>
+                <% if(process.env.NODE_ENV !== "production"){ %> 
+                <p><%= err.message %> </p>
+                <% } %> 
+          </div>          
+    </div>
+</div>

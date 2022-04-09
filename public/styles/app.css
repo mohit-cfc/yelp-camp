@@ -1,0 +1,192 @@
+.clusterMap {
+  width: 100%;
+  height: 500px;
+}
+.home-body {
+  font-family: "Roboto", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+
+  background-attachment: fixed;
+  background-size: cover;
+}
+.big-body {
+  height: 100vh;
+  background-image: url("https://res.cloudinary.com/dsazxfnsv/image/upload/v1649167533/YelpCamp/butrfno09kfxjz4ahbmz.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+.welcome h1 {
+  font-size: 2.3em;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: auto;
+  text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+.welcome {
+  width: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.welcome p {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.2em;
+  text-align: center;
+  text-shadow: 0 0.07rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.home-button {
+  margin-top: 10px;
+  appearance: none;
+  background-color: transparent;
+  border: 0.125em solid white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-width: 0;
+  outline: none;
+  padding: 1em 1em 1.2em;
+  max-height: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-button:disabled {
+  pointer-events: none;
+}
+
+.home-button:hover {
+  color: rgb(27, 25, 25);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.home-button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.show-image {
+  max-height: 300px;
+}
+
+.index-image {
+  max-height: 230px;
+}
+
+/* Main Styles */
+
+.project-body {
+  background-color: #000;
+  color: #fafafa;
+}
+
+.card {
+  background-color: #000;
+  border-color: #333;
+}
+
+.nav {
+  background-color: #000;
+  position: sticky;
+  border-bottom: 1px solid rgba(141, 147, 171, 0.3);
+}
+.nav a {
+  color: #999;
+}
+
+.nav a:hover {
+  color: #fafafa;
+}
+
+.rupee {
+  background-color: #000;
+  color: #999;
+}
+
+.form-control {
+  background-color: #111;
+  color: #fafafa;
+  outline: none;
+}
+
+.form-control:focus {
+  background-color: #111;
+  color: #fafafa;
+  outline: none;
+}
+
+.form-control::after {
+  outline: none;
+}
+
+.index-description {
+  color: #999;
+}
+
+.card-details {
+  background-color: #111;
+  color: #999;
+  border-color: #333;
+}
+
+.flash-success {
+  background-color: #0070f3;
+  color: #fafafa;
+}
+
+.flash-error {
+  background-color: #f33;
+  color: #fafafa;
+}
+
+.foot {
+  background-color: #000;
+  border-top: 1px solid rgba(141, 147, 171, 0.3);
+}
+.foot span {
+  color: #999;
+}
+.foot a {
+  color: #999;
+}
+
+.foot a:hover {
+  color: #fafafa;
+}
