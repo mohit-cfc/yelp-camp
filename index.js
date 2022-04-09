@@ -115,7 +115,7 @@ app.use((err, req, res, next) => {
   }
   res.status(status).render("error", { err });
 });
-
-app.listen(9000, () => {
-  console.log("Listening to port 9000");
+const port = process.env.PORT || 3000;
+app.listen(3000, () => {
+  console.log(`Listening to port ${port}`);
 });
