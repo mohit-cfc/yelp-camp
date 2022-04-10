@@ -49,6 +49,7 @@ module.exports.showPage = async (req, res) => {
       },
     })
     .populate("author");
+  // console.log(campground.author.username);
   if (!campground) {
     req.flash("error", "Campgound Not Found");
     return res.redirect("/campgrounds");

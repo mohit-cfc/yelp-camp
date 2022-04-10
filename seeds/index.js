@@ -39,7 +39,7 @@ mongoose
 
         images.search
           .getPhotos({
-            query: "Nature",
+            query: "Campsite",
             page: 1,
             perPage: 30,
             orientation: "landscape",
@@ -48,7 +48,7 @@ mongoose
           .then(async (data) => {
             //   console.log(img);
             const camp = new Campgrounds({
-              author: "6249205c6207a7d66f917429",
+              author: "62513592558618ea0082d240",
               title: `${sample(descriptors)} ${sample(places)}`,
               location: location,
               description:
