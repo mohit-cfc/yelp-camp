@@ -87,3 +87,10 @@ module.exports.deleteCampground = async (req, res) => {
   req.flash("success", "Successfully Deleted Campground!");
   res.redirect("/campgrounds");
 };
+
+module.exports.searchCampground = async (req, res) => {
+  const campgrounds = await Campgound.find({ title: req.query.title });
+  res.render("campgrounds/results", { campgrounds });
+
+  // res.render("campgrounds/results");
+};

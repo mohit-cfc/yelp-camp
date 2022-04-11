@@ -36,6 +36,8 @@ router.get(
   catchAsync(campgrounds.renderEditForm)
 );
 
+router.get("/results", catchAsync(campgrounds.searchCampground));
+
 router.get("/:id", catchAsync(campgrounds.showPage));
 
 router.put(
@@ -46,6 +48,8 @@ router.put(
   validateCampground,
   catchAsync(campgrounds.editCampground)
 );
+
+// router.post("/results", campgrounds.searchCampground);
 
 router.delete(
   "/:id",
