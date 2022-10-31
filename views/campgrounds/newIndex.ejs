@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate') %>
+
+<div id="map" class="clusterMap"></div>
+
+<h1 class="mt-5 mb-3 text-center">All Campgrounds</h1>
+
+<% for(let campground of campgrounds){ %>
+<div class="card mb-3 campground">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <% if(campground.images){ %>
+      <img
+        src="<%= campground.images[0].url %> "
+        class="img-fluid rounded-start index-image"
+        alt="..."
+      />
+      <% }else{ %>
+      <img src="" class="img-fluid rounded-start" alt="..." />
+      <% } %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="background-color: #000">
+          <%= campground.title %>
+        </h5>
+        <h6><%= campground.properties.popup %></h6>
+        <p class="card-text index-description"><%= campground.description %></p>
+        <p class="card-text">
+          <small class="text-muted"><%= campground.location %> </small>
+        </p>
+        <a class="btn btn-primary" href="/campgrounds/<%= campground.id %> "
+          >Show more</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
+
+<script>
+  const campgrounds = {features: <%- JSON.stringify(campgrounds) %>};
+</script>
+<script src="/clusterMaps.js"></script>

@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const campgrounds = require("../controllers/campground");
 const catchAsync = require("../utils/catchAsync");
-const { storage } = require("../cloudinary");
+const {storage} = require("../cloudinary");
 const multer = require("multer");
-const upload = multer({ storage });
+const upload = multer({storage});
 
 const {
   isLoggedIn,
@@ -14,6 +14,7 @@ const {
 const res = require("express/lib/response");
 
 router.get("/", catchAsync(campgrounds.index));
+router.get("/all", catchAsync(campgrounds.newIndex));
 
 router.get("/new", isLoggedIn, campgrounds.renderNewForm);
 
