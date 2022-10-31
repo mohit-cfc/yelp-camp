@@ -67,7 +67,7 @@ app.use(flash());
 app.engine("ejs", ejsMate);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(mongoSanitize());
@@ -117,11 +117,11 @@ app.all("*", (req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-  const { status = 500 } = err;
+  const {status = 500} = err;
   if (!err.message) {
     err.message = "Something Went Wrong";
   }
-  res.status(status).render("error", { err });
+  res.status(status).render("error", {err});
 });
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
